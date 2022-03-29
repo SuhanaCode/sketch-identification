@@ -29,7 +29,7 @@ function gotResults(error , results){
   }
   console.log(results);
   document.getElementById('label').innerHTML = "Label: " + results[0].label;
-  document.getElementById('label').innerHTML = "Confidence: " + Math.round(results[0].confidence * 100) + "%";
+  document.getElementById('confidence').innerHTML = "Confidence: " + Math.round(results[0].confidence * 100) + "%";
 
   UtterThis = new SpeechSynthesisUtterance(result[0].label);
   synth = speak(UtterThis);
